@@ -3,9 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="CSS/Administrator.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <title>Don Pollo - Administrator</title>
 </head>
 <body>
+    <header class="container" >
+        <nav style="background-color: #D84315;">
+
+            <img src="IMG/Don-Pollo-KING.jpg" alt="Don Pollo" class="img-thumbnail" style="max-width: 10%;">   
+            <ul>
+                
+                <li><a href="#" style="color: black; margin-right: 25px; font-size: 30px;">Inicio</a> </li>
+                <li><a href="#" style="color: black; margin-right: 25px; font-size: 30px;">Nosotros</a> </li>
+                <li><a href="#" role="button" style="font: black; margin-right: 25px; font-size: 30px;">Menu</a> </li>
+                <input type="text" name="Buscar" placeholder="Buscar..." aria-label="Text" style="background-color: #FFB300; border: none; ">
+            </ul>
+        </nav>
+    </header>
+
+    <main class = "container">
+        <h2 style = "text-align: center; size: 10px;">Lista de Productos Pollescos</h2>
+
+        <table id = "tabla" class="overflow-auto">
+            <thead>
+                <tr>
+                    <th>CodigoProducto</th>
+                    <th>Descripcion</th>
+                    <th>Estado</th>
+                    <th>Stock</th>
+                    <th>Precio</th>
+                    <th>Imagen-Producto</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!--Registros del menu-->
+            </tbody>
+
+        </table>
+
+    </main>
+
+     <!--El modal o dialog aparece frente al contenido-->
+    <dialog id="md-agregarProducto">     
+        <article>
+            <header>
+                <a href="#" class="close" id="BtnCerrar"></a>
+                <h3>Agregar Producto</h3>
+            </header>
+            <form id="frmAgregar">
+                <input type="file" id="imagen-file" accept="image/*" />
+                <input type="text" id="txtDescProducto" placeholder="NombreProducto" required>
+                <input type="text" id="txtAEstado" placeholder="Estado" required>
+                <input type="text;" id="txtStock" placeholder="Stock" required>
+                <input type="text;" id="txtPrecio" placeholder="Precio" required>
+                
+                <button type="submit" class="contrast" id = "btnGuardar">Guardar</button>
+
+                <input type="hidden" id="imagen-url" />
+            </form>
+        </article>
+    </dialog>
+
+    <!--Cuadro de dialgo para editar-->
+    <dialog id="md-Editar">     
+        <article>
+            <header>
+                <a href="#" class="close" id="BtnCerrarEditar"></a>
+                <h3>Editar Producto</h3>
+            </header>
+            <form id="frmEditar">
+                <input type="hidden" id="txtIdEditar"><!--Campo oculto para guardar el ID-->
+                <input type="file" id="imagen-file" accept="image/*" />
+                <input type="text" id="txtDescProducto" placeholder="NombreProducto" required>
+                <input type="text" id="txtAEstado" placeholder="Estado" required>
+                <input type="text;" id="txtStock" placeholder="Stock" required>
+                <input type="text;" id="txtPrecio" placeholder="Precio" required>
+                
+                <button type="submit" class="contrast" id = "btnEditar">Editar</button>
+
+                <input type="hidden" id="imagen-url" />
+            </form>
+        </article>
+    </dialog>
+
+     <!--Pasos para hacer el boton flotante, para registros-->
+    <button id = "BtnAgregar" class="add-button" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-plus-icon lucide-user-plus"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>
+        <!--Ruta de la Hoja de estilos para Pico css-->
+
+    </button>
+    <script src="js/Administrator.js"></script>
     
 </body>
 </html>
