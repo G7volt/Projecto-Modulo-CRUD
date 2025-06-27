@@ -1,0 +1,156 @@
+body {
+  background-color: #e6be9d;
+  font-family: Arial, sans-serif;
+}
+
+h1{
+  text-align: center;
+  color: #d94b1a;
+}
+/* ENCABEZADO */
+.menu-header {
+  background-color: #d94b1a;
+  color: white;
+  padding: 10px 0;
+}
+
+.logo-img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* TÍTULO DEL MENÚ */
+.menu-title {
+  color: #d94b1a;
+  font-weight: bold;
+}
+
+
+
+/* FOOTER */
+.menu-footer {
+  background-color: #3e2d27;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.menu-footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-info {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.footer-img {
+  width: 70px;
+  border-radius: 50%;
+}
+
+/* Contenedor de tarjetas usando Flexbox */
+.cards-grid {
+  display: flex; /* flexbox */
+  flex-wrap: wrap; /* permitir salto de línea si no hay suficiente espacio */
+  gap: 1.5rem; /* separación */
+  justify-content: center; /* centrar items */
+  margin: 0 auto; /* centrar contenedor */
+}
+
+/* Estilo de cada tarjeta individualmente*/
+.card {
+  flex: 1 1 220px; /* crecimiento flexible */
+  max-width: 300px; /* ancho máximo */
+  border: 1px solid #ddd; /* borde claro */
+  border-radius: 8px; /* esquinas redondeadas */
+  padding: 1rem; /* espacio interno */
+  text-align: center; /* centrar texto */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* sombra sutil */
+  transition: transform 0.2s; /* animación suave */
+}
+
+.card:hover {
+  transform: translateY(-4px); /* elevar al pasar */
+}
+
+.card img {
+  width: 100%; /* ancho completo */
+  height: 160px; /* altura fija */
+  object-fit: cover; /* recortar proporción */
+  border-radius: 4px; /* esquinas pequeñas */
+  margin-bottom: 0.75rem; /* espacio abajo */
+}
+
+.card h2 {
+  font-size: 1.25rem; /* tamaño título */
+  margin: 0.5rem 0 0.25rem; /* márgenes verticales */
+}
+
+.card p {
+  margin: 0.25rem 0; /* márgenes verticales */
+  color: #555; /* texto atenuado */
+  font-size: 0.95rem; /* tamaño cuerpo */
+}
+
+/* From Uiverse.io by alexruix  buscador */ 
+.group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.input {
+ width: 100%;
+ height: 40px;
+ line-height: 28px;
+ padding: 0 1rem;
+ padding-left: 2.5rem;
+ border: 2px solid transparent;
+ border-radius: 8px;
+ outline: none;
+ background-color: #f3f3f4;
+ color: #0d0c22;
+ transition: .3s ease;
+}
+
+.input::placeholder {
+ color: #9e9ea7;
+}
+
+.input:focus, input:hover {
+ outline: none;
+ border-color: rgba(234,76,137,0.4);
+ background-color: #fff;
+ box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.icon {
+ position: absolute;
+ left: 1rem;
+ fill: #9e9ea7;
+ width: 1rem;
+ height: 1rem;
+}
+
+
+
+
+
