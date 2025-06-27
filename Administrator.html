@@ -7,20 +7,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     <title>Don Pollo - Administrator</title>
 </head>
-<body>
-    <header class="container" >
-        <nav style="background-color: #D84315;">
+<body style="background-color: blanchedalmond;">
 
-            <img src="IMG/Don-Pollo-KING.jpg" alt="Don Pollo" class="img-thumbnail" style="max-width: 10%;">   
-            <ul>
-                
-                <li><a href="#" style="color: black; margin-right: 25px; font-size: 30px;">Inicio</a> </li>
-                <li><a href="#" style="color: black; margin-right: 25px; font-size: 30px;">Nosotros</a> </li>
-                <li><a href="#" role="button" style="font: black; margin-right: 25px; font-size: 30px;">Menu</a> </li>
-                <input type="text" name="Buscar" placeholder="Buscar..." aria-label="Text" style="background-color: #FFB300; border: none; ">
-            </ul>
+    <header class="menu-header d-flex align-items-center justify-content-between px-4">
+        <div class="d-flex align-items-center">
+          <img src="Img/image.png" alt="logo" class="logo-img me-2">
+          <span class="logo-text">MENU</span>
+        </div>
+        <nav class="nav-links d-flex gap-4">
+          <a href="#">Inicio</a>
+          <a href="#">Nosotros</a>
+          <a href="#">MENU DON POLLO</a>
         </nav>
-    </header>
+      </header>
 
     <main class = "container">
         <h2 style = "text-align: center; size: 10px;">Lista de Productos Pollescos</h2>
@@ -47,18 +46,28 @@
     </main>
 
      <!--El modal o dialog aparece frente al contenido-->
-    <dialog id="md-agregarProducto">     
+    <dialog id="md-agregarProducto">  
+           <div id="image-preview" style="width: 40%; padding-right: 20px;">
+                <img id="preview-img" src="" alt="Vista previa" style="width: 100%; display: none; border-radius: 8px;" />
+            </div>
         <article>
             <header>
                 <a href="#" class="close" id="BtnCerrar"></a>
                 <h3>Agregar Producto</h3>
             </header>
-            <form id="frmAgregar">
+            
+            <form id="frmAgregarProductos">
+                
                 <input type="file" id="imagen-file" accept="image/*" />
                 <input type="text" id="txtDescProducto" placeholder="NombreProducto" required>
                 <input type="text" id="txtAEstado" placeholder="Estado" required>
                 <input type="text;" id="txtStock" placeholder="Stock" required>
-                <input type="text;" id="txtPrecio" placeholder="Precio" required>
+                <div style="position: relative;">
+                    <span style="position: absolute; left: 10px; top: 50%; transform: translateX(1px);">$</span>
+                    <input type="text;" id="txtPrecio" placeholder="Precio" required>
+                </div>
+                
+                
                 
                 <button type="submit" class="contrast" id = "btnGuardar">Guardar</button>
 
@@ -68,19 +77,19 @@
     </dialog>
 
     <!--Cuadro de dialgo para editar-->
-    <dialog id="md-Editar">     
+    <dialog id="md-EditarProducto">     
         <article>
             <header>
                 <a href="#" class="close" id="BtnCerrarEditar"></a>
                 <h3>Editar Producto</h3>
             </header>
-            <form id="frmEditar">
+            <form id="frmEditarProducto">
                 <input type="hidden" id="txtIdEditar"><!--Campo oculto para guardar el ID-->
                 <input type="file" id="imagen-file" accept="image/*" />
-                <input type="text" id="txtDescProducto" placeholder="NombreProducto" required>
-                <input type="text" id="txtAEstado" placeholder="Estado" required>
-                <input type="text;" id="txtStock" placeholder="Stock" required>
-                <input type="text;" id="txtPrecio" placeholder="Precio" required>
+                <input type="text" id="txtDescProductoED" placeholder="NombreProducto" required>
+                <input type="text" id="txtAEstadoED" placeholder="Estado" required>
+                <input type="text;" id="txtStockED" placeholder="Stock" required>
+                <input type="text;" id="txtPrecioED" placeholder="Precio" required>
                 
                 <button type="submit" class="contrast" id = "btnEditar">Editar</button>
 
@@ -95,6 +104,21 @@
         <!--Ruta de la Hoja de estilos para Pico css-->
 
     </button>
+
+    <footer class="menu-footer d-flex justify-content-between align-items-center px-4 py-3 mt-5">
+        <div class="footer-links d-flex gap-4">
+          <a href="#">Inicio</a>
+          <a href="#">Nosotros</a>
+          <a href="#">Menu</a>
+        </div>
+        <div class="footer-info">
+          <small>Aviso de privacidad - Políticas de servicio</small>
+        </div>
+        <div>
+          <img src="Img/image.png" alt="footer logo" class="footer-img">
+        </div>
+      </footer>
+
     <script src="js/Administrator.js"></script>
     
 </body>
